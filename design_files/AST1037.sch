@@ -67,6 +67,8 @@
 <layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="Invisible" color="7" fill="1" visible="no" active="no"/>
 <layer number="61" name="stand" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -137,6 +139,7 @@
 <layer number="157" name="tResistor" color="7" fill="1" visible="no" active="yes"/>
 <layer number="158" name="bResistor" color="7" fill="1" visible="no" active="yes"/>
 <layer number="159" name="henwayCAP" color="13" fill="1" visible="yes" active="yes"/>
+<layer number="160" name="IDFDebug" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="191" name="mNets" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="192" name="mBusses" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="193" name="mPins" color="7" fill="1" visible="yes" active="yes"/>
@@ -208,7 +211,7 @@
 </package>
 <package name="JST_SH_5X1">
 <smd name="2" x="-1" y="2.475" dx="1.4" dy="0.6" layer="1" rot="R90"/>
-<smd name="PAD1" x="-3.3" y="-1.325" dx="1.6" dy="1.2" layer="1" rot="R90"/>
+<smd name="PAD1" x="-3.3" y="-1.325" dx="1.6" dy="1.2" layer="1" roundness="1" rot="R90"/>
 <smd name="PAD2" x="3.3" y="-1.325" dx="1.6" dy="1.2" layer="1" rot="R90"/>
 <smd name="3" x="0" y="2.475" dx="1.4" dy="0.6" layer="1" rot="R90"/>
 <wire x1="-3.5" y1="2.125" x2="3.5" y2="2.125" width="0.127" layer="51"/>
@@ -231,16 +234,6 @@
 <text x="0" y="0" size="0.5" layer="25" align="center">&gt;NAME</text>
 <rectangle x1="-0.925" y1="-0.275" x2="-0.275" y2="0.275" layer="31"/>
 <rectangle x1="0.275" y1="-0.275" x2="0.925" y2="0.275" layer="31"/>
-</package>
-<package name="0402_SHORT">
-<wire x1="-0.998" y1="0.3504" x2="0.9907" y2="0.3504" width="0.127" layer="51"/>
-<wire x1="0.9907" y1="0.3504" x2="0.9907" y2="-0.3432" width="0.127" layer="51"/>
-<wire x1="0.9907" y1="-0.3432" x2="-0.998" y2="-0.3432" width="0.127" layer="51"/>
-<wire x1="-0.998" y1="-0.3432" x2="-0.998" y2="0.3504" width="0.127" layer="51"/>
-<smd name="1" x="-0.6" y="0" dx="0.65" dy="0.55" layer="1"/>
-<smd name="2" x="0.6" y="0" dx="0.65" dy="0.55" layer="1"/>
-<text x="0" y="0" size="0.3048" layer="25" align="center">&gt;NAME</text>
-<wire x1="-0.635" y1="0" x2="0.5588" y2="0" width="0.2032" layer="1"/>
 </package>
 <package name="SO-08-COMPACT">
 <wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
@@ -269,11 +262,24 @@
 </package>
 <package name="TEST_POINT_1MM">
 <smd name="P$1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-<text x="0" y="0" size="0.75" layer="25" align="center">&gt;NAME</text>
 </package>
 <package name="TEST_POINT_2MM">
 <smd name="P$1" x="0" y="0" dx="2" dy="2" layer="1" roundness="100" cream="no"/>
 <text x="0" y="0" size="1.5" layer="25" align="center">&gt;NAME</text>
+</package>
+<package name="JST_SH_5X1_EDGE">
+<smd name="2" x="-1" y="2.475" dx="1.4" dy="0.6" layer="1" rot="R90"/>
+<smd name="PAD1" x="-3.3" y="-1.225" dx="1.4" dy="0.8" layer="1" roundness="1" rot="R90"/>
+<smd name="PAD2" x="3.3" y="-1.225" dx="1.4" dy="0.8" layer="1" rot="R90"/>
+<smd name="3" x="0" y="2.475" dx="1.4" dy="0.6" layer="1" rot="R90"/>
+<wire x1="-3.5" y1="2.125" x2="3.5" y2="2.125" width="0.127" layer="51"/>
+<wire x1="3.5" y1="2.125" x2="3.5" y2="-2.125" width="0.127" layer="51"/>
+<wire x1="3.5" y1="-2.125" x2="-3.5" y2="-2.125" width="0.127" layer="51"/>
+<wire x1="-3.5" y1="-2.125" x2="-3.5" y2="2.125" width="0.127" layer="51"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<smd name="4" x="1" y="2.475" dx="1.4" dy="0.6" layer="1" rot="R90"/>
+<smd name="5" x="2" y="2.475" dx="1.4" dy="0.6" layer="1" rot="R90"/>
+<smd name="1" x="-2" y="2.475" dx="1.4" dy="0.6" layer="1" rot="R90"/>
 </package>
 </packages>
 <symbols>
@@ -10400,6 +10406,22 @@
 <pin name="4" x="-7.62" y="-2.54" length="middle"/>
 <pin name="5" x="-7.62" y="-5.08" length="middle"/>
 </symbol>
+<symbol name="RESISTOR">
+<description>Resistor</description>
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
+<text x="0" y="1.4986" size="1.778" layer="95" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-3.302" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
 <symbol name="RESISTOR-1">
 <description>Resistor</description>
 <wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
@@ -10436,6 +10458,23 @@
 <text x="-4.826" y="2.032" size="1.778" layer="96">&gt;NAME</text>
 <pin name="1" x="0" y="0" visible="off" length="short" rot="R180"/>
 <circle x="-4.064" y="0" radius="1.481059375" width="0.254" layer="94"/>
+</symbol>
+<symbol name="RESISTOR-NTC">
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
+<text x="0" y="2.032" size="1.778" layer="95" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-4.064" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<wire x1="-2.794" y1="1.778" x2="-1.778" y2="1.778" width="0.1778" layer="94"/>
+<wire x1="-1.778" y1="1.778" x2="1.778" y2="-1.778" width="0.1778" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -10499,8 +10538,8 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS-ITM-00002" prefix="C" uservalue="yes">
-<description>CAP CER 10UF 10V 20% X5R 0603</description>
+<deviceset name="AS-ITM-00410" prefix="C" uservalue="yes">
+<description>CAP CER 1UF 10V X5R 0603</description>
 <gates>
 <gate name="G$1" symbol="C-US" x="0" y="0"/>
 </gates>
@@ -10512,8 +10551,8 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PARTNO" value="AS-ITM-00002" constant="no"/>
-<attribute name="VALUE" value="10uF" constant="no"/>
+<attribute name="PARTNO" value="AS-ITM-00410" constant="no"/>
+<attribute name="VALUE" value="1uF" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -10541,12 +10580,28 @@
 </technology>
 </technologies>
 </device>
+<device name="EDGE" package="JST_SH_5X1_EDGE">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PARTNO" value="AS-ITM-00340" constant="no"/>
+<attribute name="PNPROTATION" value="180" constant="no"/>
+<attribute name="VALUE" value="SM05B" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
-<deviceset name="AS-ITM-00076" prefix="R" uservalue="yes">
-<description>RES 0.0 OHM 1/16W 1% 0402 SMD</description>
+<deviceset name="AS-ITM-00003" prefix="R">
+<description>RES 1.00K OHM 1/16W 1% 0402</description>
 <gates>
-<gate name="G$1" symbol="RESISTOR-1" x="0" y="0"/>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="0402">
@@ -10556,31 +10611,8 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PARTNO" value="AS-ITM-00076" constant="no"/>
-<attribute name="VALUE" value="0.0" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="0402_SHORT" package="0402_SHORT">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="VALUE" value="SHORT" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="C0402" package="C0402">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PARTNO" value="AS-ITM-00076" constant="no"/>
-<attribute name="VALUE" value="0.0" constant="no"/>
+<attribute name="PARTNO" value="AS-ITM-00003" constant="no"/>
+<attribute name="VALUE" value="1.00K" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -10656,6 +10688,26 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="AS-ITM-00524" prefix="R" uservalue="yes">
+<description>THERMISTOR NTC 10KOHM 3380K 0402</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR-NTC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PARTNO" value="AS-ITM-00524" constant="no"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -10676,13 +10728,19 @@
 <part name="C2" library="tinycircuits" deviceset="AS-ITM-00008" device="" value="0.1uF"/>
 <part name="GND1" library="tinycircuits" deviceset="GND" device=""/>
 <part name="P+1" library="tinycircuits" deviceset="VCC" device=""/>
-<part name="C1" library="tinycircuits" deviceset="AS-ITM-00002" device="" value="10uF"/>
+<part name="C1" library="tinycircuits" deviceset="AS-ITM-00410" device="" value="1uF">
+<attribute name="PARTNO" value="AS-ITM-00410"/>
+<attribute name="VALUE" value="1uF"/>
+</part>
 <part name="J1" library="tinycircuits" deviceset="AS-ITM-00340" device="" value="SM05B"/>
 <part name="P+2" library="tinycircuits" deviceset="VCC" device=""/>
 <part name="GND2" library="tinycircuits" deviceset="GND" device=""/>
-<part name="R1" library="tinycircuits" deviceset="AS-ITM-00076" device="" value="0.0"/>
+<part name="R1" library="tinycircuits" deviceset="AS-ITM-00003" device="" value="1.00K">
+<attribute name="PARTNO" value="AS-ITM-00003"/>
+<attribute name="VALUE" value="1.00K"/>
+</part>
 <part name="U1" library="tinycircuits" deviceset="AS-ITM-00330" device="" value="ATTINY25"/>
-<part name="R3" library="tinycircuits" deviceset="AS-ITM-00032" device="" value="10.0K"/>
+<part name="R2" library="tinycircuits" deviceset="AS-ITM-00032" device="" value="10.0K"/>
 <part name="P+4" library="tinycircuits" deviceset="VCC" device=""/>
 <part name="TP1" library="tinycircuits" deviceset="TEST_POINT" device=""/>
 <part name="TP2" library="tinycircuits" deviceset="TEST_POINT" device=""/>
@@ -10690,11 +10748,13 @@
 <part name="TP4" library="tinycircuits" deviceset="TEST_POINT" device=""/>
 <part name="TP5" library="tinycircuits" deviceset="TEST_POINT" device=""/>
 <part name="TP6" library="tinycircuits" deviceset="TEST_POINT" device=""/>
+<part name="R3" library="tinycircuits" deviceset="AS-ITM-00524" device="" value="10K"/>
+<part name="GND3" library="tinycircuits" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="340.868" y="17.272" size="3.556" layer="94" font="vector">Soil Moisture Sensor</text>
+<text x="340.868" y="17.272" size="3.556" layer="94" font="vector">Wireling Soil Moisture</text>
 <text x="327.152" y="6.35" size="3.556" layer="94" font="vector">AS-SCH-AST1037</text>
 <text x="416.56" y="6.858" size="3.556" layer="94" font="vector">1</text>
 <text x="134.62" y="187.96" size="5.08" layer="94" font="vector">Capacitive Moisture Sensor </text>
@@ -10707,7 +10767,7 @@
 <text x="68.58" y="76.2" size="1.778" layer="96">Non Populated: -</text>
 <text x="68.58" y="73.66" size="1.778" layer="96">Hand Populated: -</text>
 <text x="68.58" y="71.12" size="1.778" layer="96">Hand Soldered: -</text>
-<text x="68.58" y="78.74" size="1.778" layer="96">Variant: Standard</text>
+<text x="68.58" y="78.74" size="1.778" layer="96">Variant: Standard - R</text>
 <text x="68.58" y="68.58" size="1.778" layer="96">Notes: -</text>
 </plain>
 <instances>
@@ -10728,7 +10788,7 @@
 <instance part="GND2" gate="1" x="162.56" y="139.7"/>
 <instance part="R1" gate="G$1" x="223.52" y="137.16" rot="R180"/>
 <instance part="U1" gate="G$1" x="177.8" y="157.48"/>
-<instance part="R3" gate="G$1" x="205.74" y="149.86"/>
+<instance part="R2" gate="G$1" x="205.74" y="149.86"/>
 <instance part="P+4" gate="VCC" x="213.36" y="154.94" smashed="yes">
 <attribute name="VALUE" x="215.9" y="157.48" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -10750,6 +10810,8 @@
 <instance part="TP6" gate="G$1" x="289.56" y="149.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="302.006" y="150.368" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="R3" gate="G$1" x="193.04" y="132.08" rot="R90"/>
+<instance part="GND3" gate="1" x="193.04" y="121.92"/>
 </instances>
 <busses>
 </busses>
@@ -10782,6 +10844,11 @@
 <label x="281.94" y="149.86" size="1.778" layer="95"/>
 <pinref part="TP6" gate="G$1" pin="1"/>
 </segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="193.04" y1="127" x2="193.04" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -10807,7 +10874,7 @@
 <wire x1="165.1" y1="162.56" x2="162.56" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
 <wire x1="210.82" y1="149.86" x2="213.36" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="149.86" x2="213.36" y2="152.4" width="0.1524" layer="91"/>
@@ -10859,7 +10926,7 @@
 <pinref part="U1" gate="G$1" pin="PB5"/>
 <wire x1="190.5" y1="149.86" x2="200.66" y2="149.86" width="0.1524" layer="91"/>
 <label x="193.04" y="149.86" size="1.778" layer="95"/>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="289.56" y1="162.56" x2="281.94" y2="162.56" width="0.1524" layer="91"/>
@@ -10899,6 +10966,18 @@
 <wire x1="289.56" y1="154.94" x2="281.94" y2="154.94" width="0.1524" layer="91"/>
 <label x="281.94" y="154.94" size="1.778" layer="95"/>
 <pinref part="TP3" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="TEMP" class="0">
+<segment>
+<label x="193.04" y="139.7" size="1.778" layer="95"/>
+<wire x1="193.04" y1="137.16" x2="193.04" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB4"/>
+<wire x1="190.5" y1="152.4" x2="200.66" y2="152.4" width="0.1524" layer="91"/>
+<label x="193.04" y="152.4" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
