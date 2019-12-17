@@ -1,7 +1,7 @@
-# TinyCircuits Whisker Soil Moisture Sensor
+# TinyCircuits Wireling Soil Moisture Sensor
 # AST1037 Rev1
 
-The design files are located under design_files/ for the TinyCircuits AST1037 Rev 1 PCB. This is a whisker board which etects moisture in soil using the ATTiny25 and this plant tag shaped Whisker so you never have to guess when to water!
+The design files are located under design_files/ for the TinyCircuits AST1037 Rev 1 PCB. This is a Wireling board which etects moisture in soil using the ATTiny25 and this plant tag shaped Whisker so you never have to guess when to water!
 
 Format is in Cadsoft Eagle format - Eagle version 6.2 was used for the original design.
 
